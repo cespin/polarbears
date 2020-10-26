@@ -10,16 +10,16 @@ These are the characteristics we have deemed important and why:
 
 ## Feasibility
 
-Or the easy it is to implement the solution
+Or how easy it is to implement the solution
 
-###### Why?
+##### Why?
 
 Because Farmacy Food is very young. Its target market is still being understood and analyzed meaning that the way the company 
 fulfills its mission might change too very soon.
 
 ## Scalability 
 
-Or the ability of the system to deal with usage increments in time.
+Or the ability of the system to deal with concurrent usage increments in time.
 
 ##### Why?
 
@@ -48,7 +48,7 @@ The degree at which the system is capable of supporting sudden bursts of concurr
 
 ##### Why?
 
-Because of usage patterns like lunch time where peaks of traffic are expected. 
+Because of usage patterns like lunchtime where peaks of traffic are expected. 
 
 ## Modularity
 
