@@ -50,13 +50,13 @@ The degree at which the system is capable of supporting sudden bursts of concurr
 
 Because of usage patterns like lunchtime where peaks of traffic are expected. 
 
-## Modularity
+## Maintainability 
 
-Or being made of discrete modules or parts.
+The degree with which the product may be modified, corrected or adapted.
 
 ##### Why?
 
-Because the business is young. Modularization will be key after the business (and its traffic) grows. Depending on the direction
+Because the business is young. A modular, modifiable and testable codebase will be key after the business (and its traffic) grows. Depending on the direction
 that takes optimization will be done in a per-module basis as needed.
 
 ## Usability
@@ -66,3 +66,13 @@ Or how easy-to-use the system is.
 ##### Why?
 
 Because little to none user-friction is a main concern.
+
+# Structure
+
+[Please check the actor/actions analysis in this Miro shared board](https://miro.com/app/board/o9J_khJhGn0=)
+
+|   Action  	    |     Actor	|     Description	|
+|:--------:	        |:--------:	| :--------	        |
+| Pay with Wallet 	|   Smart Fridge / Kiosk	||
+|          	        |   	||
+|          	        |   	||
