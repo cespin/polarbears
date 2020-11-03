@@ -1,4 +1,4 @@
-# ADR 2. Use of async communication between Location Inventory component and (External)Fridge/Toast APIs for reconciliation
+# ADR 2. Use of async communication between Location Inventory component and (External) Fridge/Toast APIs for reconciliation
 
 ## Status
 Accepted
