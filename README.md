@@ -67,20 +67,16 @@ Or how easy-to-use the system is.
 
 Because little to none user-friction is a main concern.
 
-# Architectural Style
-
-Considering the size of the company and  the development team, the budget and the fact that Farmacy Food is very early on its journey, we think that starting with a modular monolith is best suited for their needs.
-
-By examining the set of architecture characteristics our system should support  (feasibility, scalability, availability, reliability, elasticity, maintainability, usability) and the component diagram we came up with after carefully examining the requirements, we think that 
-these architectural characteristics does not require us to separate different parts of the system into different quanta for now.
-
-Moving forward, we anticipate the system will migrate to a service based architecture. To facilitate that change, we designed the system with separate databases in the domain components (e.g. Customer Profile, Location Inventory, Meal Savvy, Purchase etc.) so that accessing to the data will be via function/api calls instead of direct database joins/queries.
-
-![Design](design.png)
-
 # Structure
 
-[Please check the actor/actions analysis in this Miro shared board](https://miro.com/app/board/o9J_khJhGn0=)
+## Actor/Actions Component Mapping
+
+**Click on the image below** in order to open the Miro board<br/><br/>
+[![Please check the actor/actions diagram in this Miro shared board](ActorsAndActions.jpg)](https://miro.com/app/board/o9J_khJhGn0=/)
+<br/>
+<br/>
+#### Rationale about the Components:
+<br/>
 
 |   Actor 	           |     Action    	 |     Component  	        |   Description	|
 |:--------:	           |:--------:	     |:--------	                |:--------	    |
@@ -100,3 +96,18 @@ Moving forward, we anticipate the system will migrate to a service based archite
 | System         	   | (Recurring) Reports purchased meal | | |
 | System         	   | (Recurring) Update inventory| | |
 | System         	   | Pushes user activity | | |
+
+## Architecture Style
+
+Considering the size of the company and its development team, the budget and the fact that Farmacy Food is very early in its journey, we think that starting with a **modular monolith** is best suited for their needs.
+
+By examining the set of architecture characteristics the system should support  (feasibility, scalability, availability, reliability, elasticity, maintainability, usability) and the components diagram we came up with after carefully examining the requirements, we think that
+the system reflects only one architecture quantum.
+
+Moving forward, after traffic and usage increases, we anticipate that the system will migrate to a service-based architecture. To facilitate that change, we designed the system with separate databases (deployed in a single server) for each domain component (e.g. Customer Profile, Location Inventory, Meal Savvy, Purchase etc.) so integration between the components should happen through internal RPC calls available within the server and never by executing queries/joins directly in many databases.
+
+We want to make an emphasis on the importance of modularity. Without it, migrating in the future into a different style like service-based will be harder. Fitness functions that help us protect loose coupling and high cohesion of the modules should be put in place.
+
+Finally, this business domain is growing and defining itself, data is key. Putting in place the right components that help the business understand its own data is in our opinion a key ingredient to success. 
+
+![Design](design.png)
