@@ -117,3 +117,10 @@ Finally, this business domain is growing and defining itself, data is key. Putti
 [ADR-1](https://github.com/cespin/polarbears/blob/main/ADR-1.md)
 <br/>
 [ADR-2](https://github.com/cespin/polarbears/blob/main/ADR-2.md)
+
+# Principles (Undocumented)
+
+- Cloud First 
+- Facts over Opinions
+- Maintainability
+- Small and Simple
