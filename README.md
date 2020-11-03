@@ -88,7 +88,7 @@ Because little to none user-friction is a main concern.
 | Customer         	   | Buys meal offsite (online)         | Meal Scheduler<br/><br/>Payment<br/><br/>Restocker| The user may **choose and buy** either one or more meals through the web or mobile application. When this happens the "Meal Scheduler" component will delegate the payment flow to the "Payment" component.<br/><br/>After the payment is processed the "Restocker" component is told to prepare to have the selected meals delivered at the chosen location(s). |
 | Customer         	   | Recharges Wallet                   | Payment<br/><br/>(External System) Fridge/Toast API| There may be at most one wallet for each customer. This wallet may hold credits, pending discounts or promotions depending on what the business decides to do.<br/><br/>In the case of credits, the "Payment" component must be instructed by the web or mobile application to charge a specific amount into the wallet. We are assuming that the backend systems of the Fridge and Toast products are capable of contacting the "Payment" component in order to make use of what's in it.|
 | Customer         	   | Refers someone                     | Referrals<br/><br/>Payment | We are assuming that the referral will be captured by the web or mobile application when the users sign up. Assuming also that referrals are equivalent to credits or free meals in the system, the "Referrals" component should inform about this credit to the "Payment" component so that when the Smart Fridge or Toast APIs contacts it the referral credit is used.|
-| Customer         	   | Subscribes to meal plan | | |
+| Customer         	   | Subscribes to meal plan            | Subscriptions<br/><br/>Payment<br/><br/>Restocker| Depending on the nature of the subscription this may be implemented in different ways<br/><br/>The first thing is to create the subscription within the "Subscription" component and to get the initial payment through the "Payment" component.<br/><br/>If the subscription is about getting regular meals for less money then adding this information to the wallet within the "Payment" component is enough.<br/><br/>If the subscription is about subscribing to specific (or recommended) meals then the "Subscriptions" component needs to tell the "Restocker" component to prepare for those meals for specific dates and locations.|
 | Operator         	   | Plans restocking | | |
 | Operator         	   | Prepares to restock | | |
 | Operator         	   | Replenishes location | | |
@@ -111,3 +111,7 @@ We want to make an emphasis on the importance of modularity. Without it, migrati
 Finally, this business domain is growing and defining itself, data is key. Putting in place the right components that help the business understand its own data is in our opinion a key ingredient to success. 
 
 ![Design](design.png)
+
+## Architecture Decision Records
+
+[ADR-2](https://github.com/cespin/polarbears/blob/main/ADR-2.md)
