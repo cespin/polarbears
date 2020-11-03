@@ -76,6 +76,8 @@ these architectural characteristics does not require us to separate different pa
 
 Moving forward, we anticipate the system will migrate to a service based architecture. To facilitate that change, we designed the system with separate databases in the domain components (e.g. Customer Profile, Location Inventory, Meal Savvy, Purchase etc.) so that accessing to the data will be via function/api calls instead of direct database joins/queries.
 
+![Design](design.png)
+
 # Structure
 
 [Please check the actor/actions analysis in this Miro shared board](https://miro.com/app/board/o9J_khJhGn0=)
